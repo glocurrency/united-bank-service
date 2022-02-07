@@ -1,0 +1,22 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Call to an undefined static method GloCurrency\\\\UnitedBank\\\\Models\\\\RoutingTag\\:\\:firstWhere\\(\\)\\.$#"
+			count: 1
+			path: src/Jobs/CreateTransactionJob.php
+
+		-
+			message: "#^Call to an undefined static method GloCurrency\\\\UnitedBank\\\\Models\\\\Transaction\\:\\:create\\(\\)\\.$#"
+			count: 1
+			path: src/Jobs/CreateTransactionJob.php
+
+		-
+			message: "#^Call to an undefined static method GloCurrency\\\\UnitedBank\\\\Models\\\\Transaction\\:\\:firstWhere\\(\\)\\.$#"
+			count: 1
+			path: src/Jobs/CreateTransactionJob.php
+
+		-
+			message: "#^Access to an undefined property GloCurrency\\\\UnitedBank\\\\Models\\\\Transaction\\:\\:\\$processingItem\\.$#"
+			count: 1
+			path: src/Listeners/UpdateProcessingItemStateSubscriber.php
+
