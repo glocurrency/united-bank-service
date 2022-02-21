@@ -11,10 +11,10 @@ use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldBeEncrypted;
 use Illuminate\Bus\Queueable;
 use GloCurrency\UnitedBank\Models\Transaction;
-use GloCurrency\MiddlewareBlocks\Enums\QueueTypeEnum as MQueueTypeEnum;
 use GloCurrency\UnitedBank\Exceptions\CreditTransactionException;
 use GloCurrency\UnitedBank\Enums\TransactionStateCodeEnum;
 use GloCurrency\UnitedBank\Enums\ErrorCodeFactory;
+use GloCurrency\MiddlewareBlocks\Enums\QueueTypeEnum as MQueueTypeEnum;
 use BrokeYourBike\UnitedBank\Enums\ErrorCodeEnum;
 use BrokeYourBike\UnitedBank\Client;
 
@@ -80,7 +80,7 @@ class SendTransactionJob implements ShouldQueue, ShouldBeUnique, ShouldBeEncrypt
         }
 
         // TODO: if state is `UNKNOWN`, dispatch FetchStateJob
-        $errorCode = ErrorCodeEnum::tryFrom($response->state);
+        $errorCode = ErrorCodeEnum::tryFrom((string) $response->state);
 
         if (!$errorCode) {
             throw CreditTransactionException::unexpectedErrorCode($response->state);
@@ -139,7 +139,7 @@ class SendTransactionJob implements ShouldQueue, ShouldBeUnique, ShouldBeEncrypt
             throw CreditTransactionException::apiRequestException($e);
         }
 
-        if (ErrorCodeEnum::SUCCESS->value === $response->responseCode) {
+        if (ErrorCodeEnum::SUCCESS->value === $response->responseCode && !empty($response->requestId)) {
             return $response->requestId;
         }
 

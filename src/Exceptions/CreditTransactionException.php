@@ -2,11 +2,11 @@
 
 namespace GloCurrency\UnitedBank\Exceptions;
 
+use GloCurrency\UnitedBank\Models\Transaction;
+use GloCurrency\UnitedBank\Enums\TransactionStateCodeEnum;
 use BrokeYourBike\UnitedBank\Models\AccountInformationResponse;
 use BrokeYourBike\UnitedBank\Enums\ErrorCodeEnum;
 use BrokeYourBike\UnitedBank\Client;
-use GloCurrency\UnitedBank\Models\Transaction;
-use GloCurrency\UnitedBank\Enums\TransactionStateCodeEnum;
 
 final class CreditTransactionException extends \RuntimeException
 {
@@ -45,7 +45,7 @@ final class CreditTransactionException extends \RuntimeException
         return new static(TransactionStateCodeEnum::API_REQUEST_EXCEPTION, $message);
     }
 
-    public static function unexpectedErrorCode(string $code): self
+    public static function unexpectedErrorCode(?string $code): self
     {
         $className = ErrorCodeEnum::class;
         $message = "Unexpected {$className}: `{$code}`";
