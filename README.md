@@ -6,3 +6,9 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b021b92391e0abd5a75f/test_coverage)](https://codeclimate.com/repos/61fffefbb2bede0177000c1e/test_coverage)
 
 United Bank service to consume with MW.
+
+## Authors
+- [Ivan Stasiuk](https://github.com/brokeyourbike) | [Twitter](https://twitter.com/brokeyourbike) | [stasi.uk](https://stasi.uk)
+
+## License
+[Mozilla Public License v2.0](https://github.com/glocurrency/united-bank-service/blob/main/LICENSE)
