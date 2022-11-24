@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.2](https://www.github.com/glocurrency/united-bank-service/compare/v0.1.1...v0.1.2) (2022-10-16)
+
+
+### Miscellaneous Chores
+
+* update description ([4b604e7](https://www.github.com/glocurrency/united-bank-service/commit/4b604e711efc7a2ad9d1a6f590d1ab16b4fc8ae2))
+
 ### [0.1.1](https://www.github.com/glocurrency/united-bank-service/compare/v0.1.0...v0.1.1) (2022-02-21)
 
 
