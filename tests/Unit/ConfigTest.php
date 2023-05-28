@@ -38,11 +38,11 @@ class ConfigTest extends TestCase
     /** @test */
     public function it_can_return_values()
     {
-        $url = $this->faker->url;
-        $token = $this->faker->uuid;
-        $clientId = $this->faker->uuid;
+        $url = $this->faker->url();
+        $token = $this->faker->uuid();
+        $clientId = $this->faker->uuid();
         $clientName = $this->faker->name();
-        $username = $this->faker->userName;
+        $username = $this->faker->userName();
         $password = $this->faker->password();
 
         $configPrefix = 'services.united_bank.api';
