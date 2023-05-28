@@ -1,5 +1,13 @@
 # Changelog
 
+### [0.1.3](https://www.github.com/glocurrency/united-bank-service/compare/v0.1.2...v0.1.3) (2023-05-28)
+
+
+### Bug Fixes
+
+* packagist.org ([7926202](https://www.github.com/glocurrency/united-bank-service/commit/7926202be7f3d6476f5bade65d1ac1ae92fda257))
+* use 0 ([ab398d6](https://www.github.com/glocurrency/united-bank-service/commit/ab398d69eaf58011c41665f187b9c0faa9ddbb01))
+
 ### [0.1.2](https://www.github.com/glocurrency/united-bank-service/compare/v0.1.1...v0.1.2) (2022-10-16)
 
 
